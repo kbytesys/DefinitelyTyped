@@ -1,4 +1,4 @@
-// Type definitions for jsPDF v1.1.135
+// Type definitions for jsPDF v1.4.1
 // Project: https://github.com/MrRio/jsPDF
 // Definitions by: Amber Schühmacher <https://github.com/amberjs>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
@@ -7,7 +7,7 @@ declare module 'jspdf' {
     class jsPDF {
         constructor(orientation?:any,
                     unit?:string,
-                    format?:string,
+                    format?:string | number[],
                     compressPdf?:number);
 
         CapJoinStyles:any;
@@ -202,7 +202,7 @@ declare module 'jspdf' {
         // jsPDF plugin: total_pages
         putTotalPages(pageExpression:string):jsPDF;
     }
-    
+
     namespace jsPDF {}
 
     export = jsPDF;
